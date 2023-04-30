@@ -11,6 +11,43 @@ body {
     font-family: 'Roboto', sans-serif;
     /*высота строки для текста больше самого шрифта в 1,2 раза; не нужно указывать высоту строки в пикселях*/
     line-height: 1.2;
+    /*леттер спейсинг - уменьшает на 2 процента расстояние между буквами, используется, как правило,для всего проекта*/
+    letter-spacing: -0.02em;
+    color: #2F2E41;
+    /*font-weight: 400;*/
+    display: flex;
+    flex-direction: column;
+    /*вилимая высота браузера veiw height*/
+    min-height: 100vh;
+}
+
+.container {
+    /*максимальная ширина экрана 1920px минус два раза по 15px на адаптиве для padding*/
+    max-width: 1170px;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    /*внешний отступ 0 по вертикали и по краям автоматически*/
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 44px;
+    color: #2F2E41;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+h1,
+h3,
+.button-login {
+    text-transform: uppercase;
+}
+/*пробел обозначает вложенность, т.е. тэг спан, вложенный в тэг параграфа*/
+p span {
+    font-weight: 700;
 }
 
 header,
@@ -23,6 +60,55 @@ header {
     height: 80px;
 }
 
+.header-wrap {
+    display: flex;
+    /*    fleх-direction - это свойство которое задаёт ГЛАВНУЮ ОСЬ (или row, или column*/
+    /*    justife-content отвечает за ВЫРАВНИВАНИЕ по ГЛАВНОЙ ОСИ*/
+    /*    align-items отвечаент за выравнивание по ВТОРОСТЕПЕННОЙ ОСИ*/
+    justify-content: space-between;
+    align-items: center;
+    /*height позволяет следить, чтобы элементам в контейнера хватало места по высоте*/
+    height: 100%;
+}
+
+section {
+    /*запись отступов идёт по часовой стрелке, начиная от 12 часов*/
+    /*padding: 100px 20px 100px 50px;*/
+    padding: 100px 0;
+    /*    жадность - забирало свободное пространство*/
+    flex-grow: 1;
+}
+
+a {
+    color: white;
+    /*подчёркивание ссылок по умолчанию solid*/
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /*    свойство gap не работает в браузере САФАРИ*/
+    /*gap: 10px;*/
+    text-transform: capitalize;
+}
+
+footer img {
+    margin-right: 10px;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+ul {
+    display: flex;
+    /*стиль листа списка*/
+    justify-content: space-between;
+    list-style: none;
+}
+
+li {
+    padding: 9px 15px;
+}
+
 .button-login {
     border: 2px solid #FFFFFF;
     border-radius: 5px;
@@ -30,4 +116,54 @@ header {
     height: 40px;
     /*прозрачная кнопка background-color: transparent*/
     background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    /*появляется "ручка" вместо обычного курсора в области кнопки*/
+    cursor: pointer;
+}
+
+.cards-wrap {
+    display: flex;
+    /*flex-wrap занимается скидыванием элементов, когда они не помещаются в родителя при адаптиве*/
+    flex-wrap: wrap;
+    /*    свойство gap не работает в браузере САФАРИ*/
+    gap: 15px;
+}
+
+h3 {
+    /*эта величина влияла на перенос заголовков на нижнюю строку*/
+    max-width: 240px;
+    text-align: center;
+}
+
+.card {
+    background: #FFFFFF;
+    border: 2px solid #E7E7E7;
+    border-radius: 5px;
+    /*ширина карточки принята из минимальной ширины карточки на мобильниках в макете Фигмы*/
+    width: 330px;
+    padding: 46px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*    жадность - забирало свободное пространство*/
+    flex-grow: 1;
+}
+
+.card-img {
+    margin: 40px 0 36px;
+}
+
+/*медиа-запросы всегда пишутся внизу, чтобы перезатирать стили*/
+@media (max-width: 767px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
 }

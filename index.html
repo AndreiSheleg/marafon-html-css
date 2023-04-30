@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--    шрифты линкуем от гугл фонтс-->
+    <!--    шрифты линкуем от гугл фонтс-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,65 +13,85 @@
 
     <title>Мастер-класс по вёрстке</title>
 </head>
+
 <body>
 <header>
-    <a href="#s">
-        <img src="./assets/images/logo.svg" alt=logo-link-homepage">
-    </a>
-    <button class="button-login">login</button>
+    <div class="container">
+        <div class="header-wrap">
+            <a href="#s">
+                <img src="./assets/images/logo.svg" alt=logo-link-homepage">
+            </a>
+            <button class="button-login">login</button>
+        </div>
+
+    </div>
+
 </header>
 
 <section>
-    <h1>html+css. верстка</h1>
-    <div>
-        <h2>теория html + css. Структура приложения</h2>
-        <img src="./assets/images/img-1.svg" alt="image of cart1">
-        <p>Проговорим о том, что такое <span>HTML и CSS</span>. Создадим проект и рассмотрим его файловую структуру. Научимся
-            работать с макетом в Figma. Изучим 13 самых используемых тегов. Напишем HTML-структуру нашего
-            приложения.</p>
+    <div class="container">
+        <h1>html+css. верстка</h1>
+        <div class="cards-wrap">
+            <div class="card">
+                <h3>теория html + css. Структура приложения</h3>
+                <img class="card-img" src="./assets/images/img-1.svg" alt="image of cart1">
+                <p>Проговорим о том, что такое <span>HTML и CSS</span>. Создадим проект и рассмотрим его файловую
+                    структуру. Научимся
+                    работать с макетом в Figma. Изучим 13 самых используемых тегов. Напишем HTML-структуру нашего
+                    приложения.</p>
+            </div>
+            <div class="card">
+                <h3>Стилизация HTML-элементов</h3>
+                <img class="card-img" src="./assets/images/img-2.svg" alt="image of cart2">
+                <p>Подключим шрифты. Рассмотрим самый правильный способ добавления стилей. Рассмотрим синтаксис
+                    написания
+                    стилей. Напишем стили для элементов. Изучим популярные <span>свойства css</span>. Посмотрим как
+                    располагать элементы,
+                    используя Flexbox.</p>
+            </div>
+            <div class="card">
+                <h3>Адаптив. Медиазапросы</h3>
+                <img class="card-img" src="./assets/images/img-3.svg" alt="image of cart3">
+                <p>Сделаем наше приложение адаптивным, чтобы оно так же хорошо выглядело на планшетах и мобильных
+                    телефонах.
+                    Рассмотрим как работает свойство flex-wrap. Научимся делать <span>адаптив</span>, используя
+                    медиазапросы.</p>
+            </div>
+        </div>
     </div>
-    <div>
-        <h2>Стилизация HTML-элементов</h2>
-        <img src="./assets/images/img-2.svg" alt="image of cart2">
-        <p>Подключим шрифты. Рассмотрим самый правильный способ добавления стилей. Рассмотрим синтаксис написания
-            стилей. Напишем стили для элементов. Изучим популярные <span>свойства css</span>. Посмотрим как располагать элементы,
-            используя Flexbox.</p>
-    </div>
-    <div>
-        <h2>Адаптив. Медиазапросы</h2>
-        <img src="./assets/images/img-3.svg" alt="image of cart3s">
-        <p>Сделаем наше приложение адаптивным, чтобы оно так же хорошо выглядело на планшетах и мобильных телефонах.
-            Рассмотрим как работает свойство flex-wrap. Научимся делать <span>адаптив</span>, используя медиазапросы.</p>
-    </div>
+
 </section>
 
 <footer>
-    <ul>
-        <li>
-            <a href="">
-                <img src="./assets/images/home-icon.svg" alt="link to home">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <img src="./assets/images/computer-icon.svg" alt="link to all courses">
-                All Courses
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <img src="./assets/images/sandbox-icon.svg" alt="link to sanbox">
-                Sandbox
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <img src="./assets/images/map-pointer-icon.svg" alt="link to contacts">
-                Contacts
-            </a>
-        </li>
-    </ul>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="https://it-incubator.io"  target="_blank">
+                    <img src="./assets/images/home-icon.svg" alt="link to home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <img src="./assets/images/computer-icon.svg" alt="link to all courses">
+                    All Courses
+                </a>
+            </li>
+            <li>
+                <a href="https://sandbox.it-incubator.io" target="_blank">
+                    <img src="./assets/images/sandbox-icon.svg" alt="link to sanbox">
+                    Sandbox
+                </a>
+            </li>
+            <li>
+                <a href="https://it-incubator.io/contacts" target="_blank">
+                    <img src="./assets/images/map-pointer-icon.svg" alt="link to contacts">
+                    Contacts
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </footer>
 </body>
 </html>
